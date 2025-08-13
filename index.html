@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Para ti ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0f0f14;
+    --card:#181824;
+    --text:#ffffff;
+    --muted:#b8b8c7;
+    --accent:#ff4d6d;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:'Poppins',system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;
+    background: radial-gradient(1200px 600px at 80% -10%, #281a2f, transparent),
+                radial-gradient(1000px 400px at -20% 0%, #1a2636, transparent),
+                var(--bg);
+    color:var(--text);
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+  .card{
+    width:100%;
+    max-width:860px;
+    background:linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    backdrop-filter: blur(8px);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+  }
+  .grid{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  @media(min-width:860px){
+    .grid{grid-template-columns: 1.1fr 1fr;}
+  }
+  .photo{
+    position:relative;
+    aspect-ratio: 4/5;
+    background:#111;
+    overflow:hidden;
+  }
+  .photo img{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    filter: contrast(1.02) saturate(1.05);
+  }
+  .badge{
+    position:absolute;
+    bottom:16px;
+    left:16px;
+    background:rgba(0,0,0,0.5);
+    color:#fff;
+    padding:8px 12px;
+    border-radius:999px;
+    font-size:12px;
+    letter-spacing:.5px;
+    text-transform: uppercase;
+    border:1px solid rgba(255,255,255,0.2);
+  }
+  .content{
+    padding:28px 28px 32px;
+  }
+  h1{
+    margin:0 0 12px 0;
+    font-size: clamp(28px, 3vw, 40px);
+    line-height:1.15;
+  }
+  p{
+    margin:0 0 16px 0;
+    color:var(--muted);
+    font-size: clamp(14px, 1.4vw, 18px);
+  }
+  .heart{
+    display:inline-block;
+    width:12px;height:12px;
+    background:var(--accent);
+    transform: rotate(45deg);
+    margin-right:8px;
+    position:relative;
+  }
+  .heart::before,.heart::after{
+    content:"";
+    position:absolute;
+    background:var(--accent);
+    width:12px;height:12px;border-radius:50%;
+  }
+  .heart::before{left:-6px;top:0}
+  .heart::after{left:0;top:-6px}
+  .cta{
+    display:inline-block;
+    margin-top:10px;
+    padding:12px 18px;
+    border-radius:14px;
+    border:1px solid rgba(255,255,255,0.2);
+    text-decoration:none;
+    color:#fff;
+    transition: transform .12s ease, background .2s ease;
+  }
+  .cta:hover{ transform: translateY(-2px); background: rgba(255,255,255,0.06); }
+  footer{
+    margin-top:16px;
+    font-size:12px;
+    color:#9aa0b4;
+  }
+</style>
+</head>
+<body>
+  <main class="card">
+    <section class="grid">
+      <figure class="photo">
+        <!-- Reemplaza 'tu-foto.jpg' con la ruta/URL real en el repo -->
+<div style="padding: 6px; background:black; border-radius: 500px;">
+  <img src="./image.jpg" 
+       alt="Eres increíble" 
+       style="border-radius: 22px; display:block; width:100%; height:100%; object-fit:cover;">
+</div>
+
+      </figure>
+      <div class="content">
+        <h1>Siempre tú</h1>
+        
+        <p>
+          Si estas leyendo esto es porque quiero darte las gracias por ser la persona maravillosa que eres y por aparecer en mi vida
+          en el momento mas aleatorio posible, pero que al mismo tiempo fue el mejor momento de mi vida.
+        </p>
+        <p>
+          Te amo con todo mi corazón y quiero que sepas que siempre estaré aquí para ti, apoyándote en cada paso que des.
+          Eres la razón por la que sonrío cada día y por la que me esfuerzo por ser mejor.
+        </p>
+        <footer>Hecho para mi mavis. ❤️</footer>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
